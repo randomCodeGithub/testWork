@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+}
+
+.img-bg {
+    position: fixed; height: 100%; width: 100%;
+    background: url(../img/bg.jpg) no-repeat center fixed;
+    background-size: cover;
+    z-index: -1;
+    animation: shrink 13s infinite alternate steps(60);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+}
+
+/* COLS */
+
+.col-50 {
+    width: 50%;
+    position: relative;
+padding-right: 15px;
+padding-left: 15px;
+
+}
+
+.col-100 {
+    width: 100%;
+    position: relative;
+padding-right: 15px;
+padding-left: 15px;
+
+}
+
+.col {
+    width: 50%;
+    position: relative;
+padding-right: 15px;
+padding-left: 15px;
+
+}
+
+/* DISPLAY */
+
+.d-flex {
+    display: flex;
+}
+.d-none {
+    display: none;
+}
+
+/* FLEX */
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+/* POSITIONS */
+
+.pos-abs {
+    position: absolute !important;
+}
+
+.pos-rel {
+    position: relative !important;
+}
+
+/* BACKGROUNDS */
+
+.bg-dark-blue {
+    background-color: rgba(27, 35, 71, 0.8);
+}
+
+
+/* COLORS */
+
+.text-red{
+    color: rgb(255, 0, 0);
+}
+
+/* TEXT ALIGNS */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header-const h2::after {
+    margin: 25px 0 !important;   
+}
+.header-const {
+    text-align: left !important;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+    font-weight: 300;
+}
+p {
+    margin: 1rem 0;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #8495b7;
+}
+
+/* HTML TAG STYLE */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #a7b3cb;
+
+}
+
+input {
+    border: 0 !important;
+    border-bottom: 1px solid gray !important;
+    border-radius: 0 !important;
+    font-size: 16px !important;
+    box-sizing: border-box;
+    width: 100%;
+    margin:0;
+    width: 400px;
+  }
+
+label {
+    margin: 0 !important;
+    font-size: 16px !important;
+    display: inline-block;
+    color: #8495b7;
+  }
+
+button {
+    font-size: 13px !important;
+    color: #fff;
+    background-color: transparent;
+    text-transform: uppercase !important;
+    border: 2px solid #48abfe;
+    border-radius: 50rem;
+    padding: .5rem 1.5rem ;
+    cursor:pointer;
+    font-weight: 600;
+  }
+
+  /* INPUT CLASSES */
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-control {
+    display: inline-block;
+    width: 100%;
+
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+/* PSEUDO ELEMENTS */
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #48abfe;
+    margin-top: 25px;
+}
+
+/* ID */
+
+
+#signUpDiv, #logDiv {
+padding:4rem;
+color: #fff;
+}
+
+#login, #signUp {
+    opacity: 1;
+    transition: opacity 1s;
+    width: 60%;
+}
+
+#login.hide, #signUp.hide {
+    opacity: 0;
+}
+
+#formDiv {
+    transition: all .9s;
+    height: 110% !important;
+    top: -5%;
+    background-color: #fff !important;
+}
+
+#signUpBtnInForm, #loginBtnInForm  {
+background-color: #f89a36;
+border: 0;
+}
+
+
+/* HOVER */
+
+#signUpBtn:hover, #loginBtn:hover {
+    background-color: #48abfe;
+}
+
+#signUpBtnInForm:hover, #loginBtnInForm:hover  {
+    background-color: #f6c039;
+    }
+
+/* SLIDE TRANSLATE */
+
+.slide-left {
+    left: 2%; 
+    transform: translateX(0%);
+}
+
+.slide-right {
+    left: -2%; 
+    transform: translateX(100%);
+}
+
+/* FADE IN/OUT classes */
+
+.fade-out-left {
+    animation: fadeOutLeft 1s;
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s;
+}
+
+
+.fade-out-right {
+    animation: fadeOutRight 1s;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 1s;
+}
+
+
+/* FADE OUT RIGHT/LEFT animations */
+
+@keyframes fadeOutLeft {
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes fadeOutRight{
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+/* FADE IN RIGHT/LEFT */
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(30px);       
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInLeft{
+    0% {
+        transform: translateX(-30px);       
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* SCALE BG IMAGE */
+
+@keyframes shrink {
+    0% {
+      transform: scale(1.2)
+    }
+    10% {
+        transform: scale(1.175)
+      }
+    25% {
+        transform: scale(1.15)
+      }
+    50% {
+        transform: scale(1.1)
+      }
+    75% {
+        transform: scale(1.05)
+    }
+    90% {
+        transform: scale(1.025)
+      }
+    100% {
+      transform: scale(1.0)
+    }
+  }
+
+  /* MEDIA */
+
+  @media (max-width: 319.5px) {
+    #signUpDiv, #logDiv{
+        margin-bottom: 3rem;
+        }
+
+  }
+
+  @media (max-width: 615px) {
+      .row {
+          margin: 0;
+      }
+      #formDiv {
+          width: 100% !important;
+          left: 0 !important;
+
+      } 
+  }
+
+  @media (max-width: 767px) {
+    footer {
+        bottom: 0;
+    }
+
+    .col {
+        width: 100%;
+        text-align: center;
+    
+    }
+
+    h2::after {
+        margin: 25px auto;
+    }
+
+    .slide-right {
+        top:5%;
+        transform: translateY(100%);
+    }
+    .slide-left {
+        top:5% !important;
+        transform: translateY(0%) !important;
+    }
+
+    #formDiv {
+        left: 5%;
+        width: 90%;
+        height: 50% !important;
+    }   
+    
+    #signUpDiv, #logDiv {
+        padding-bottom:4rem;
+        }
+
+        #signUpDiv {
+            margin-bottom:4rem;
+            }
+
+        @keyframes fadeOutLeft {
+            100% {
+                transform: translateY(-30px);
+            }
+        }
+        
+        @keyframes fadeOutRight{
+            100% {
+                transform: translateY(30px);
+            }
+        }
+        
+        /* FADE IN RIGHT/LEFT */
+        
+        @keyframes fadeInRight {
+            0% {
+                transform: translateY(30px);       
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes fadeInLeft{
+            0% {
+                transform: translateY(-30px);       
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }    
+
+  }
+
+  @media (min-width: 767px) and (max-width: 870px) {
+      .row{
+          margin: 0;
+      }
+
+  }
+
+  @media (min-width: 767.5px){
+    .vh-100 {
+        height: 100vh;
+    }
+    
+  }
+
+  @media (min-height: 800px){
+    .vh-100 {
+        height: 100vh;
+    }
+  }
